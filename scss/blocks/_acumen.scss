@@ -1,0 +1,127 @@
+.acumen {
+    padding: 100px 0;
+    background-color: #0E1011;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: 30px;
+        &.active {
+            .acumen__content {
+                animation: acumen-content 1s forwards;
+            }
+            .acumen__image {
+                animation: acumen-image 1s forwards;
+            }
+        }
+    }
+    &__content {
+        width: 52%;
+        transform: translateX(-200%);
+    }
+    &__title {
+        margin-bottom: 50px;
+        color: #fff;
+        font-size: 4vw;
+    }
+    &__image {
+        width: 496px;
+        height: auto;
+        transform: translateX(200%);
+    }
+    &__text {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 150%;
+        color: #fff;
+        margin-bottom: 50px;
+    }
+    &__button {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+        width: 225px;
+        height: 70px;
+        color: #fff;
+        background-color: #0A2FD6;
+        border-radius: 30px;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            background-color: #0b38ff;;
+        }
+    }
+    @keyframes acumen-content {
+        0% {
+            transform: translateX(-200%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    @keyframes acumen-image {
+        0% {
+            transform: translateX(200%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .acumen {
+        &__image {
+            width: 50%;
+        }
+        &__title {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 893px) {
+    .acumen {
+        &__image {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .acumen {
+        padding: 40px 0;
+        &__button {
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .acumen {
+        &__container {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            row-gap: 40px;
+        }
+        &__content {
+            width: 100%;
+        }
+        &__image {
+            width: 70%;
+        }
+        &__button {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 425px) {
+    .acumen {
+        &__image {
+            width: 100%;
+        }
+    }
+}
